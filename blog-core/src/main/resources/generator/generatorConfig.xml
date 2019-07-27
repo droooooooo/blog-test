@@ -1,0 +1,63 @@
+?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!--
+    defaultModelType,可以设置为flat，hierarchical，conditional
+        flat，一个表的所有字段定义在一个实体类中；
+        hierarchical，主键字段如果存在会定义在基类中，所有BLOB字段定义在一个类中，剩下的字段定义在一个类中
+    targetRuntime，可以设置为MyBatis3，MyBatis3Simple，MyBatis3DynamicSql，Ibatis2Java2，Ibatis2Java5
+        MyBatis3，默认值，生成适用于MyBatis3.0+，JSE5.0+
+    -->
+    <context id="mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="javaFileEncoding" value="UTF-8"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="tk.mybatis.mapper.common.Mapper"/>
+            <!-- caseSensitive默认false，当数据库表名区分大小写时，可以将该属性设置为true -->
+            <property name="caseSensitive" value="true"/>
+        </plugin>
+        <!-- 注释 -->
+        <commentGenerator>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="true"/>
+            <property name="suppressDate" value="true" /> <!-- 是否生成注释代时间戳-->
+        </commentGenerator>
+
+        <!-- jdbc连接 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/test?useSSL=false"
+                        userId="root"
+                        password="abc123456">
+        </jdbcConnection>
+
+        <!-- 类型转换 -->
+        <javaTypeResolver >
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <!-- 实体类生成配置 -->
+        <javaModelGenerator targetPackage="com.my.blog.repository.model" targetProject="./src/main/java">
+            <property name="enableSubPackages" value="false" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <!-- 映射文件生成配置 -->
+        <sqlMapGenerator targetPackage="mapping"  targetProject="./src/main/resources">
+            <property name="enableSubPackages" value="false" />
+        </sqlMapGenerator>
+
+        <!-- Mapper类生成配置 -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.my.blog.repository.dao" targetProject="./src/main/java">
+            <property name="enableSubPackages" value="false" />
+        </javaClientGenerator>
+
+        <!-- 要生成那些表(更改tableName和domainObjectName就可以) -->
+        <table schema="test" tableName="%">
+            <generatedKey column="id" sqlStatement="Mysql" />
+        </table>
+
+    </context>
+</generatorConfiguration>

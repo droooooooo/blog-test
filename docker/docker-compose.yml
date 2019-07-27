@@ -1,0 +1,63 @@
+version: "2"
+
+services:
+  mysql:
+    #找到当前目录下mysql构建镜像
+    build: ./mysql
+    #镜像名称
+    image: drooooo/blog-mysql:v1
+    #项目名称
+    container_name: blog-mysql
+    #端口映射
+    ports:
+    - "3306:3306"
+    #将mysql目录映射到本地 应根据自己所需要映射的目录进行修改
+    volumes:
+    - "./mysql/conf:/etc/mysql/conf.d"
+    - "/root/temp/blog/mysql/logs:/logs"
+    - "/root/temp/blog/mysql/data:/var/lib/mysql"
+    #设置编码格式
+    command: [
+      '--default-authentication-plugin=mysql_native_password',
+      '--character-set-server=utf8mb4',
+      '--collation-server=utf8mb4_general_ci',
+      '--explicit_defaults_for_timestamp=true',
+      '--lower_case_table_names=1',
+      '--character-set-server=utf8mb4',
+      '--collation-server=utf8mb4_unicode_ci'
+    ]
+    #初始化设置
+    environment:
+      MYSQL_PASSWORD: "abc123456"
+      MYSQL_DATABASE: "blog-test"
+      MYSQL_ROOT_PASSWORD: "abc123456"
+#  nginx:
+#    image: nginx:latest
+#    container_name: blog-nginx
+#    restart: always
+#    ports:
+#    - "8080:80"
+#    - "3000:3000"
+#    volumes:
+#    - "./nginx/web:/usr/share/nginx/html"
+#    - "./nginx/web:/var/static/dist"
+#    - "./nginx/conf:/etc/nginx/conf.d"
+#    - "/root/temp/blog/nginx/log:/var/log/nginx"
+#    - "/root/temp/blog/nginx/www:/var/www"
+#    - "/etc/letsencrypt:/etc/letsencrypt"
+      #redis直接拉去redis镜像启动redis
+#  redis:
+#    image: redis:latest
+#    container_name: blog-redis
+#    ports:
+#    - "6379:6379"
+#    volumes:
+#    - "/root/temp/blog/redis/data:/data"
+#  compose-java:
+#    #找到当前目录下的java文件夹构建
+#    build: ./java
+#    #镜像名称
+#    image: compose-java:test
+#    container_name: compose-java
+#    ports:
+#    - "8888:8888"

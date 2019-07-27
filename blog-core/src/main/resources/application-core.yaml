@@ -1,0 +1,62 @@
+
+spring:
+  #数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://129.28.198.90:3306/blog-test?useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=GMT%2B8  &useSSL=false
+    username: root
+    password: abc123456
+    druid:
+      max-active: 20
+      initial-size: 1
+      max-wait: 60000
+      min-idle: 1
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-open-prepared-statements: 20
+      async-init: true
+  cache:
+    type: redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 12
+    ssl: false
+    timeout: 60s
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: -1s
+  http:
+    encoding:
+      charset: utf-8
+      enabled: true
+      force: true
+  jackson:
+    default-property-inclusion: NON_NULL
+    #    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    serialization:
+      write-dates-as-timestamps: true
+mybatis:
+  mapper-locations: classpath:/mapping/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+#    配置后可以简写resultType
+#  type-aliases-package:
+pagehelper:
+  #  reasonable: true
+  helper-dialect: mysql
+  support-methods-arguments: true
+  params: count=countsql
+logging:
+  config: classpath:logback-spring.xml
+app:
+  enabledConfigLog: true

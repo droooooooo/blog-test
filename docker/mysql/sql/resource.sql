@@ -1,0 +1,11 @@
+CREATE TABLE resource(
+  id INT(10) PRIMARY KEY AUTO_INCREMENT,
+  route_path VARCHAR(10) NOT NULL COMMENT '路由地址',
+  parent_id INT(10)  NOT NULL COMMENT '父级id',
+  css_selector VARCHAR(10) DEFAULT '' COMMENT '选择器',
+  status INT (4) DEFAULT 1 COMMENT '状态0停用，1启用，默认启用',
+  type INT (4) DEFAULT 1 COMMENT '类型 0 url,1 按钮',
+  create_time TIMESTAMP NULL COMMENT '创建时间',
+  update_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  flag INT (4) DEFAULT 0 COMMENT ''
+) ENGINE = InnoDB DEFAULT CHARSET=utf8 COMMENT '角色配置表';

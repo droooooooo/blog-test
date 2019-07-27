@@ -1,0 +1,11 @@
+CREATE TABLE topic(
+   id INT(10) PRIMARY KEY AUTO_INCREMENT,
+   type INT(3) NOT NULL DEFAULT 0 COMMENT'主题类型，0游客发表，1用户发表',
+   content TEXT NOT NULL COMMENT'评论内容',
+   user_account VARCHAR(50) NOT NULL COMMENT'评论账号',
+   user_id INT(10) COMMENT'评论用户id',
+   article_id INT(10) NOT NULL COMMENT'文章id',
+   create_time TIMESTAMP NULL COMMENT '创建时间',
+   update_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+   flag INT (4) DEFAULT 0 COMMENT ''
+)ENGINE = InnoDB DEFAULT CHARSET=utf8 COMMENT '评论表'

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.my.blog.repository.dao.UserMapper">
+    <resultMap id="BaseResultMap" type="com.my.blog.repository.model.User">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+        <result column="user_password" jdbcType="VARCHAR" property="userPassword"/>
+        <result column="user_nikename" jdbcType="VARCHAR" property="userNikename"/>
+        <result column="user_telephone" jdbcType="VARCHAR" property="userTelephone"/>
+        <result column="user_type" jdbcType="INTEGER" property="userType"/>
+        <result column="status" jdbcType="INTEGER" property="status"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="flag" jdbcType="INTEGER" property="flag"/>
+    </resultMap>
+
+
+    <sql id="BaseColumnList">
+      id,user_name,user_nikename,user_telephone,user_type,status,create_time,update_time
+    </sql>
+
+    <select id="selectUserList" parameterType="Map" resultType="com.my.blog.repository.vo.UserVo">
+        SELECT
+        <include refid="BaseColumnList"/>
+        FROM user WHERE 1=1
+        <if test='account != null and account!=""'>
+            and  user_name LIKE CONCAT('%','${account}','%')
+        </if>
+    </select>
+
+    <select id="selectByAccount" resultType="com.my.blog.repository.vo.UserVo">
+        SELECT
+        <include refid="BaseColumnList"/>
+        FROM user
+        <where>
+            <if test="account!=null">
+                user.user_name = #{account,jdbcType=VARCHAR}
+            </if>
+        </where>
+    </select>
+
+    <select id="selectByParams" parameterType="com.my.blog.repository.dto.AdminDto" resultType="com.my.blog.repository.model.User">
+        SELECT
+        <include refid="BaseColumnList"/>
+        FROM user
+        <where>
+            <if test="account!=null">
+                user.user_name = #{account,jdbcType=VARCHAR}
+            </if>
+            <if test="password!=null">
+                AND user.user_password = #{password,jdbcType=VARCHAR}
+            </if>
+            AND status = 1
+        </where>
+    </select>
+
+    <insert id="insertOne" parameterType="com.my.blog.repository.dto.AdminDto">
+        insert into user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="account != null">
+                user_name,
+            </if>
+            <if test="password != null">
+                user_password,
+            </if>
+            <if test="nikename != null">
+                user_nikename,
+            </if>
+            <if test="telephone != null">
+                user_telephone,
+            </if>
+            <if test="type != null">
+                user_type,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="createTime == null">
+                create_time,
+            </if>
+            <if test="flag != null">
+                flag,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="account != null">
+                #{account,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null">
+                #{password,jdbcType=VARCHAR},
+            </if>
+            <if test="nikename != null">
+                #{nikename,jdbcType=VARCHAR},
+            </if>
+            <if test="telephone != null">
+                #{telephone,jdbcType=VARCHAR},
+            </if>
+            <if test="type != null">
+                #{type,jdbcType=INTEGER},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=INTEGER},
+            </if>
+            <if test="createTime == null">
+                now(),
+            </if>
+            <if test="flag != null">
+                #{flag,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="update" parameterType="Map">
+        UPDATE user
+        <set>
+            <if test="account != null">
+                user_name= #{account,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null">
+                user_password = #{password,jdbcType=VARCHAR},
+            </if>
+            <if test="nikename != null">
+                user_nikename = #{nikename,jdbcType=VARCHAR},
+            </if>
+            <if test="telephone != null">
+                user_telephone = #{telephone,jdbcType=VARCHAR},
+            </if>
+            <if test="type != null">
+                user_type = #{type,jdbcType=INTEGER},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=INTEGER},
+            </if>
+            <if test="flag != null">
+                flag = #{flag,jdbcType=INTEGER},
+            </if>
+        </set>
+        WHERE id=#{id,jdbcType=INTEGER}
+    </update>
+
+    <update id="updateStatus" parameterType="Map">
+        UPDATE user SET status = #{status,jdbcType=INTEGER}
+        WHERE id=#{id,jdbcType=INTEGER} AND user_type = 1
+    </update>
+
+    <delete id="deleteById">
+        DELETE FROM user
+        WHERE id=#{id,jdbcType=INTEGER}
+    </delete>
+</mapper>

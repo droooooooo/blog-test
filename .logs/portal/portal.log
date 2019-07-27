@@ -1,0 +1,220 @@
+2019-07-27 11:43:22.189 [main] INFO  com.my.blog.BlogAdminApplication -
+				Starting BlogAdminApplication on CYN9F5CSI16BQIE with PID 14480 (D:\blog\blog-admin\target\classes started by Administrator in D:\blog)
+2019-07-27 11:43:22.225 [main] INFO  com.my.blog.BlogAdminApplication -
+				The following profiles are active: core
+2019-07-27 11:43:23.020 [main] WARN  tk.mybatis.spring.mapper.ClassPathMapperScanner -
+				No MyBatis mapper was found in '[com.my.blog]' package. Please check your configuration.
+2019-07-27 11:43:23.050 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner -
+				No MyBatis mapper was found in '[com.my.blog]' package. Please check your configuration.
+2019-07-27 11:43:23.094 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate -
+				Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-07-27 11:43:23.096 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate -
+				Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-27 11:43:23.131 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate -
+				Finished Spring Data repository scanning in 32ms. Found 0 repository interfaces.
+2019-07-27 11:43:23.141 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate -
+				Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-07-27 11:43:23.142 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate -
+				Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-27 11:43:23.166 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate -
+				Finished Spring Data repository scanning in 17ms. Found 0 repository interfaces.
+2019-07-27 11:43:23.523 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$34bcae76] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-27 11:43:23.588 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-27 11:43:23.676 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-27 11:43:23.734 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-27 11:43:23.795 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-27 11:43:23.799 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'transactionConfig' of type [com.my.blog.config.TransactionConfig$$EnhancerBySpringCGLIB$$e7a8cd83] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-27 11:43:23.811 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'transactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-27 11:43:23.827 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$610a9cf3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-27 11:43:23.855 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'redisCacheConfig' of type [com.my.blog.redis.RedisCacheConfig$$EnhancerBySpringCGLIB$$70cd456b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-27 11:43:23.881 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'transactionAdviceConfig' of type [com.my.blog.config.TransactionAdviceConfig$$EnhancerBySpringCGLIB$$5daca4db] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-27 11:43:23.887 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'txAdvice' of type [org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-27 11:43:23.887 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'txAdviceAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-27 11:43:24.199 [main] WARN  io.undertow.websockets.jsr -
+				UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2019-07-27 11:43:24.224 [main] INFO  io.undertow.servlet -
+				Initializing Spring embedded WebApplicationContext
+2019-07-27 11:43:24.224 [main] INFO  org.springframework.web.context.ContextLoader -
+				Root WebApplicationContext: initialization completed in 1899 ms
+2019-07-27 11:43:24.375 [main] INFO  com.my.blog.runner.BlogApplicationRunner -
+				博客关键配置信息:
+2019-07-27 11:43:24.376 [main] INFO  com.my.blog.runner.BlogApplicationRunner -
+				Data Source:
+2019-07-27 11:43:24.376 [main] INFO  com.my.blog.runner.BlogApplicationRunner -
+				  - url:jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=GMT%2B8  &useSSL=false
+2019-07-27 11:43:24.376 [main] INFO  com.my.blog.runner.BlogApplicationRunner -
+				  - username:root
+2019-07-27 11:43:24.376 [main] INFO  com.my.blog.runner.BlogApplicationRunner -
+				  - password:abc123456
+2019-07-27 11:43:24.376 [main] INFO  com.my.blog.runner.BlogApplicationRunner -
+				Redis:
+2019-07-27 11:43:24.376 [main] INFO  com.my.blog.runner.BlogApplicationRunner -
+				  - database:12
+2019-07-27 11:43:24.376 [main] INFO  com.my.blog.runner.BlogApplicationRunner -
+				  - host:127.0.0.1
+2019-07-27 11:43:24.376 [main] INFO  com.my.blog.runner.BlogApplicationRunner -
+				  - port:6379
+2019-07-27 11:43:24.376 [main] INFO  com.my.blog.runner.BlogApplicationRunner -
+				  - password:null
+2019-07-27 11:43:25.719 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor -
+				Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-27 11:43:25.870 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler -
+				Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-07-27 11:43:25.870 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler -
+				Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-07-27 11:43:25.870 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler -
+				Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-07-27 11:43:25.870 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler -
+				Clear EntityHelper entityTableMap cache.
+2019-07-27 11:43:26.970 [main] INFO  org.xnio -
+				XNIO version 3.3.8.Final
+2019-07-27 11:43:26.976 [main] INFO  org.xnio.nio -
+				XNIO NIO Implementation Version 3.3.8.Final
+2019-07-27 11:43:27.018 [main] INFO  o.s.b.w.embedded.undertow.UndertowServletWebServer -
+				Undertow started on port(s) 9998 (http) with context path ''
+2019-07-27 11:43:27.021 [main] INFO  com.my.blog.BlogAdminApplication -
+				Started BlogAdminApplication in 6.115 seconds (JVM running for 7.623)
+2019-07-27 11:43:27.023 [main] INFO  com.my.blog.runner.BlogApplicationRunner -
+				博客部署完成，博客访问地址:http://localhost:9998
+2019-07-27 11:43:57.831 [XNIO-1 task-1] INFO  io.undertow.servlet -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-27 11:43:57.831 [XNIO-1 task-1] INFO  org.springframework.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2019-07-27 11:43:57.844 [XNIO-1 task-1] INFO  org.springframework.web.servlet.DispatcherServlet -
+				Completed initialization in 13 ms
+2019-07-27 11:43:57.939 [XNIO-1 task-1] INFO  com.my.blog.aspect.WebLogAspect -
+				请求地址 : http://localhost:9998/logon/login
+2019-07-27 11:43:57.940 [XNIO-1 task-1] INFO  com.my.blog.aspect.WebLogAspect -
+				HTTP METHOD : POST
+2019-07-27 11:43:57.941 [XNIO-1 task-1] INFO  com.my.blog.aspect.WebLogAspect -
+				CLASS_METHOD : com.my.blog.controller.AdminController.login
+2019-07-27 11:43:57.941 [XNIO-1 task-1] INFO  com.my.blog.aspect.WebLogAspect -
+				参数 : [com.my.blog.repository.dto.AdminDto@643860be]
+2019-07-27 11:43:57.973 [XNIO-1 task-1] INFO  com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Starting...
+2019-07-27 11:43:58.138 [XNIO-1 task-1] INFO  com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Start completed.
+2019-07-27 11:43:58.189 [XNIO-1 task-1] INFO  com.my.blog.exception.ErrorActionAdvice -
+				{"msg":"用户不存在,或已停用","code":"20001","detailMessage":"用户不存在,或已停用","stackTrace":[],"suppressedExceptions":[]}
+2019-07-27 14:11:34.137 [main] INFO  com.my.blog.BlogAdminApplication -
+				Starting BlogAdminApplication on CYN9F5CSI16BQIE with PID 16428 (D:\blog\blog-admin\target\classes started by Administrator in D:\blog)
+2019-07-27 14:11:34.139 [main] INFO  com.my.blog.BlogAdminApplication -
+				The following profiles are active: core
+2019-07-27 14:11:34.975 [main] WARN  tk.mybatis.spring.mapper.ClassPathMapperScanner -
+				No MyBatis mapper was found in '[com.my.blog]' package. Please check your configuration.
+2019-07-27 14:11:35.000 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner -
+				No MyBatis mapper was found in '[com.my.blog]' package. Please check your configuration.
+2019-07-27 14:11:35.032 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate -
+				Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-07-27 14:11:35.033 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate -
+				Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-27 14:11:35.068 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate -
+				Finished Spring Data repository scanning in 30ms. Found 0 repository interfaces.
+2019-07-27 14:11:35.076 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate -
+				Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-07-27 14:11:35.077 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate -
+				Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-27 14:11:35.101 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate -
+				Finished Spring Data repository scanning in 17ms. Found 0 repository interfaces.
+2019-07-27 14:11:35.408 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$9fd706b9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-27 14:11:35.469 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-27 14:11:35.551 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-27 14:11:35.586 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-27 14:11:35.612 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-27 14:11:35.616 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'transactionConfig' of type [com.my.blog.config.TransactionConfig$$EnhancerBySpringCGLIB$$52c325c6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-27 14:11:35.628 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'transactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-27 14:11:35.636 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cc24f536] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-27 14:11:35.661 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'redisCacheConfig' of type [com.my.blog.redis.RedisCacheConfig$$EnhancerBySpringCGLIB$$dbe79dae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-27 14:11:35.685 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'transactionAdviceConfig' of type [com.my.blog.config.TransactionAdviceConfig$$EnhancerBySpringCGLIB$$c8c6fd1e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-27 14:11:35.688 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'txAdvice' of type [org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-27 14:11:35.688 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+				Bean 'txAdviceAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-27 14:11:35.945 [main] WARN  io.undertow.websockets.jsr -
+				UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2019-07-27 14:11:35.964 [main] INFO  io.undertow.servlet -
+				Initializing Spring embedded WebApplicationContext
+2019-07-27 14:11:35.965 [main] INFO  org.springframework.web.context.ContextLoader -
+				Root WebApplicationContext: initialization completed in 1775 ms
+2019-07-27 14:11:36.098 [main] INFO  com.my.blog.runner.BlogApplicationRunner -
+				博客关键配置信息:
+2019-07-27 14:11:36.099 [main] INFO  com.my.blog.runner.BlogApplicationRunner -
+				Data Source:
+2019-07-27 14:11:36.099 [main] INFO  com.my.blog.runner.BlogApplicationRunner -
+				  - url:jdbc:mysql://129.28.198.90:3306/blog-test?useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=GMT%2B8  &useSSL=false
+2019-07-27 14:11:36.099 [main] INFO  com.my.blog.runner.BlogApplicationRunner -
+				  - username:root
+2019-07-27 14:11:36.099 [main] INFO  com.my.blog.runner.BlogApplicationRunner -
+				  - password:abc123456
+2019-07-27 14:11:36.099 [main] INFO  com.my.blog.runner.BlogApplicationRunner -
+				Redis:
+2019-07-27 14:11:36.099 [main] INFO  com.my.blog.runner.BlogApplicationRunner -
+				  - database:12
+2019-07-27 14:11:36.099 [main] INFO  com.my.blog.runner.BlogApplicationRunner -
+				  - host:127.0.0.1
+2019-07-27 14:11:36.099 [main] INFO  com.my.blog.runner.BlogApplicationRunner -
+				  - port:6379
+2019-07-27 14:11:36.099 [main] INFO  com.my.blog.runner.BlogApplicationRunner -
+				  - password:null
+2019-07-27 14:11:37.292 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor -
+				Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-27 14:11:37.460 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler -
+				Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-07-27 14:11:37.461 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler -
+				Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-07-27 14:11:37.462 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler -
+				Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-07-27 14:11:37.462 [main] INFO  t.mybatis.mapper.autoconfigure.MapperCacheDisabler -
+				Clear EntityHelper entityTableMap cache.
+2019-07-27 14:11:38.504 [main] INFO  org.xnio -
+				XNIO version 3.3.8.Final
+2019-07-27 14:11:38.513 [main] INFO  org.xnio.nio -
+				XNIO NIO Implementation Version 3.3.8.Final
+2019-07-27 14:11:38.551 [main] INFO  o.s.b.w.embedded.undertow.UndertowServletWebServer -
+				Undertow started on port(s) 9998 (http) with context path ''
+2019-07-27 14:11:38.554 [main] INFO  com.my.blog.BlogAdminApplication -
+				Started BlogAdminApplication in 5.209 seconds (JVM running for 6.42)
+2019-07-27 14:11:38.556 [main] INFO  com.my.blog.runner.BlogApplicationRunner -
+				博客部署完成，博客访问地址:http://localhost:9998
+2019-07-27 14:12:01.011 [XNIO-1 task-1] INFO  io.undertow.servlet -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-27 14:12:01.011 [XNIO-1 task-1] INFO  org.springframework.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2019-07-27 14:12:01.025 [XNIO-1 task-1] INFO  org.springframework.web.servlet.DispatcherServlet -
+				Completed initialization in 14 ms
+2019-07-27 14:12:01.117 [XNIO-1 task-1] INFO  com.my.blog.aspect.WebLogAspect -
+				请求地址 : http://localhost:9998/logon/login
+2019-07-27 14:12:01.117 [XNIO-1 task-1] INFO  com.my.blog.aspect.WebLogAspect -
+				HTTP METHOD : POST
+2019-07-27 14:12:01.118 [XNIO-1 task-1] INFO  com.my.blog.aspect.WebLogAspect -
+				CLASS_METHOD : com.my.blog.controller.AdminController.login
+2019-07-27 14:12:01.118 [XNIO-1 task-1] INFO  com.my.blog.aspect.WebLogAspect -
+				参数 : [com.my.blog.repository.dto.AdminDto@1b08852e]
+2019-07-27 14:12:01.153 [XNIO-1 task-1] INFO  com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Starting...
+2019-07-27 14:12:01.842 [XNIO-1 task-1] INFO  com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Start completed.
+2019-07-27 14:12:02.013 [XNIO-1 task-1] INFO  com.my.blog.exception.ErrorActionAdvice -
+				{"msg":"用户不存在,或已停用","code":"20001","detailMessage":"用户不存在,或已停用","stackTrace":[],"suppressedExceptions":[]}
