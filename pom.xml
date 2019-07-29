@@ -41,6 +41,7 @@
         <mybatis.version>2.0.0</mybatis.version>
         <mybatis.pagehelper.version>1.2.5</mybatis.pagehelper.version>
         <mybatis.mapper.version>2.0.3</mybatis.mapper.version>
+        <maven.assembly>3.0.0</maven.assembly>
     </properties>
 
     <dependencyManagement>
