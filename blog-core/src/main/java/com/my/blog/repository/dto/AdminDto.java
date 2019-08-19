@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
+import java.util.Date;
 
 
 @Getter
@@ -14,9 +15,6 @@ import javax.persistence.SequenceGenerator;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AdminDto {
-  @Id
-  private Integer id;
-
   /**
    * 用户名
    */
@@ -41,8 +39,5 @@ public class AdminDto {
    */
   private Integer type;
 
-  /**
-   * 用户状态0停用，1启用，默认启用
-   */
-  private Integer status;
+  private Date createTime;
 }

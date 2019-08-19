@@ -17,7 +17,7 @@ public interface UserMapper extends Mapper<User> {
 
     User selectById(@Param("id") Integer id);
 
-    int insertOne(AdminDto adminDto);
+    int insertOne(User user);
 
     int update(Map map);
 

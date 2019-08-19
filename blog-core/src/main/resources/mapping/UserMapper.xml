@@ -31,9 +31,9 @@
         </if>
     </select>
 
-    <select id="selectByAccount" resultType="com.my.blog.repository.vo.UserVo">
+    <select id="selectByAccount" resultType="com.my.blog.repository.model.User">
         SELECT
-        <include refid="BaseColumnList"/>
+        *
         FROM user
         <where>
             <if test="account!=null">
@@ -57,22 +57,22 @@
         </where>
     </select>
 
-    <insert id="insertOne" parameterType="com.my.blog.repository.dto.AdminDto">
+    <insert id="insertOne" parameterType="com.my.blog.repository.model.User">
         insert into user
         <trim prefix="(" suffix=")" suffixOverrides=",">
-            <if test="account != null">
+            <if test="userName != null">
                 user_name,
             </if>
-            <if test="password != null">
+            <if test="userPassword != null">
                 user_password,
             </if>
-            <if test="nikename != null">
+            <if test="userNikename != null">
                 user_nikename,
             </if>
-            <if test="telephone != null">
+            <if test="userTelephone != null">
                 user_telephone,
             </if>
-            <if test="type != null">
+            <if test="userType != null">
                 user_type,
             </if>
             <if test="status != null">
@@ -86,20 +86,20 @@
             </if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
-            <if test="account != null">
-                #{account,jdbcType=VARCHAR},
+            <if test="userName != null">
+                #{userName,jdbcType=VARCHAR},
             </if>
-            <if test="password != null">
-                #{password,jdbcType=VARCHAR},
+            <if test="userPassword != null">
+                #{userPassword,jdbcType=VARCHAR},
             </if>
-            <if test="nikename != null">
-                #{nikename,jdbcType=VARCHAR},
+            <if test="userNikename != null">
+                #{userNikename,jdbcType=VARCHAR},
             </if>
-            <if test="telephone != null">
-                #{telephone,jdbcType=VARCHAR},
+            <if test="userTelephone != null">
+                #{userTelephone,jdbcType=VARCHAR},
             </if>
-            <if test="type != null">
-                #{type,jdbcType=INTEGER},
+            <if test="userType != null">
+                #{userType,jdbcType=INTEGER},
             </if>
             <if test="status != null">
                 #{status,jdbcType=INTEGER},

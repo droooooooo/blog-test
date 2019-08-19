@@ -66,11 +66,11 @@
             <scope>test</scope>
         </dependency>
         <!--opencv-->
-        <dependency>
-            <groupId>org.openpnp</groupId>
-            <artifactId>opencv</artifactId>
-            <version>${opencv.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.openpnp</groupId>-->
+            <!--<artifactId>opencv</artifactId>-->
+            <!--<version>${opencv.version}</version>-->
+        <!--</dependency>-->
 
         <!--引入kafak和spring整合的jar-->
         <dependency>

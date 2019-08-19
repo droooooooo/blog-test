@@ -19,6 +19,8 @@ public enum SysRetCodeEnum{
     USER_UPDATE_ERROR("20007","用户更新错误"),
     USER_DELETE_ERROR("20008","用户删除失败"),
     USER_STATUS_ERROR("20009","用户更新状态失败"),
+    PASSWORD_UPDATE_ERROR("20010","密码更新失败"),
+    PASSWORD_UPDATE_SAME_ERROR("20010","输入的密码与原密码相同"),
 
     //返回码类型--通用-文章(3开头)
     VALID_ARTICLE_EMPTY("30001","文章不存在"),

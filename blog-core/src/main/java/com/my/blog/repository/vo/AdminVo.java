@@ -12,7 +12,10 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AdminVo {
-  private String token;
-  private User user;
-  private Long refreshDate;
+
+    private String token;
+
+    private User user;
+
+    private Long refreshDate;
 }

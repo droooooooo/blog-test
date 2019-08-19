@@ -4,6 +4,7 @@ import com.my.blog.annotation.ResponseView;
 import com.my.blog.repository.dto.AdminDto;
 import com.my.blog.repository.model.User;
 import com.my.blog.repository.vo.AdminVo;
+import com.my.blog.repository.vo.UserVo;
 import com.my.blog.service.AdminService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,14 +32,19 @@ public class AdminController {
 
     @PostMapping("/register")
     @ResponseView
-    public User register(@RequestBody AdminDto adminDto){
-        return adminService.register(adminDto);
+    public void register(@RequestBody AdminDto adminDto){
+        adminService.register(adminDto);
     }
 
     @GetMapping("/verify")
     @ResponseView
-    public User verify(String account){
+    public UserVo verify(String account){
         return adminService.verify(account);
     }
 
+    @PostMapping("/forget")
+    @ResponseView
+    public void forget(@RequestBody AdminDto adminDto){
+        adminService.forget(adminDto);
+    }
 }

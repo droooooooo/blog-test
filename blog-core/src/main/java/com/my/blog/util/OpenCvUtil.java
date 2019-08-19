@@ -1,15 +1,7 @@
 package com.my.blog.util;
 
 import lombok.extern.slf4j.Slf4j;
-import nu.pattern.OpenCV;
-import org.opencv.core.*;
-import org.opencv.features2d.DescriptorExtractor;
-import org.opencv.features2d.DescriptorMatcher;
-import org.opencv.features2d.FeatureDetector;
-import org.opencv.features2d.Features2d;
-import org.opencv.imgcodecs.Imgcodecs;
-import org.opencv.imgproc.Imgproc;
-import org.opencv.objdetect.CascadeClassifier;
+
 import org.springframework.stereotype.Service;
 
 

@@ -1,7 +1,5 @@
 package com.my.blog.repository.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Date;
@@ -14,25 +12,25 @@ public class User {
     /**
      * 用户名
      */
-    @JsonProperty(value = "account")
     private String userName;
 
     /**
+     * 用户密码
+     */
+    private String userPassword;
+    /**
      * 昵称
      */
-    @JsonProperty(value = "nikename")
     private String userNikename;
 
     /**
      * 手机号码
      */
-    @JsonProperty(value = "telephone")
     private String userTelephone;
 
     /**
      * 用户类型 0管理员,1用户
      */
-    @JsonProperty(value = "type")
     private Integer userType;
 
     /**
@@ -82,6 +80,23 @@ public class User {
      */
     public void setUserName(String userName) {
         this.userName = userName == null ? null : userName.trim();
+    }
+
+    /**
+     * 获取用户密码
+     *
+     * @return user_password - 用户密码
+     */
+    public String getUserPassword() {
+        return userPassword;
+    }
+
+    /**
+     *设置用户密码
+     * @param userPassword 用户密码
+     */
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword == null ? null : userPassword.trim();
     }
 
     /**
